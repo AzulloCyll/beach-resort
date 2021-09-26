@@ -9,7 +9,7 @@ const getUnique = (items, value) => {
   return [...new Set(items.map((item) => item[value]))];
 };
 
-export default function RoomFilter() {
+export default function RoomFilter({ rooms }) {
   const context = useContext(RoomContext);
   const {
     handleChange,
@@ -53,7 +53,6 @@ export default function RoomFilter() {
             {types}
           </select>
         </div>
-        <option value="single">single</option>
         {/* end of select type */}
       </form>
     </section>
